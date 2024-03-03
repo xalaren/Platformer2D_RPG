@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B296A3DC-E9A4-4A7D-B69E-C063D5AC1C50}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Platformer_2D_RPG</RootNamespace>
+    <AssemblyName>Platformer 2D RPG</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EditorMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditorMenu.Designer.cs">
+      <DependentUpon>EditorMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\EditorCore.cs" />
+    <Compile Include="Editor\FilesName.cs" />
+    <Compile Include="Editor\LevelsLoader.cs" />
+    <Compile Include="GameEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameEditor.Designer.cs">
+      <DependentUpon>GameEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameWindow.Designer.cs">
+      <DependentUpon>GameWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game\Block.cs" />
+    <Compile Include="Game\Entity.cs" />
+    <Compile Include="Game\EntityController.cs" />
+    <Compile Include="Editor\Files.cs" />
+    <Compile Include="Game\Fireball.cs" />
+    <Compile Include="Game\FireballController.cs" />
+    <Compile Include="Game\Frame.cs" />
+    <Compile Include="Game\GameCore.cs" />
+    <Compile Include="Game\Ground.cs" />
+    <Compile Include="Game\GUI.cs" />
+    <Compile Include="Game\IObjectController.cs" />
+    <Compile Include="Game\Level.cs" />
+    <Compile Include="Game\LevelEndBlock.cs" />
+    <Compile Include="Game\ObjectsDrawer.cs" />
+    <Compile Include="Game\PlatformController.cs" />
+    <Compile Include="Game\Spike.cs" />
+    <Compile Include="Game\Platform.cs" />
+    <Compile Include="Game\Player.cs" />
+    <Compile Include="Game\SpikeController.cs" />
+    <Compile Include="Game\Time.cs" />
+    <Compile Include="Game\Transform.cs" />
+    <Compile Include="Game\XPBlock.cs" />
+    <Compile Include="Game\XPBlockController.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordsWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecordsWindow.Designer.cs">
+      <DependentUpon>RecordsWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartWindow.Designer.cs">
+      <DependentUpon>StartWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TexturesResourceFile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TexturesResourceFile.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="EditorMenu.resx">
+      <DependentUpon>EditorMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameEditor.resx">
+      <DependentUpon>GameEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameWindow.resx">
+      <DependentUpon>GameWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RecordsWindow.resx">
+      <DependentUpon>RecordsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartWindow.resx">
+      <DependentUpon>StartWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TexturesResourceFile.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>TexturesResourceFile.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\levelEndArrow-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playerSprite-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playerSprite-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spike-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xpBlockSprite-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entitySprite-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\entitySprite-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doubleJump-bonus-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dash-bonus-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireCharmBonus-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireball-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spike-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ground-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\platformBox-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\platformBox-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\platformBox-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\platformTemplate-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\levelEndArrow-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editorIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scoresIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backIcon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
